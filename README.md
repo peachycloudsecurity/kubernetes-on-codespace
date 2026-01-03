@@ -57,11 +57,9 @@ You should see the node in `Ready` state and all system pods running.
 ---
 ## Support
 
-🤝 Ko-fi: https://ko-fi.com/peachycloudsecurity
-️🌊 Linkedin: https://linktr.ee/peachycloudsecurity
-🎥 YouTube: youtube.com/@peachycloudsecurity
-📸 Instagram: instagram.com/peachycloudsecurity 
-👍 Topmate: topmate.io/peachycloudsecurity 
+- 🤝 Ko-fi: https://ko-fi.com/peachycloudsecurity
+- 👍 Topmate: topmate.io/peachycloudsecurity
+- 🎥 YouTube: youtube.com/@peachycloudsecurity
 
 ---
 
