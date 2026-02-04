@@ -14,11 +14,18 @@ else
 fi
 
 echo "[+] Stopping any existing k3s processes"
+sudo systemctl stop k3s 2>/dev/null || true
+sudo k3s-killall.sh 2>/dev/null || true
 sudo pkill -9 k3s 2>/dev/null || true
-sleep 3
+sleep 5
+
+echo "[+] Unmounting containerd mounts"
+sudo umount $(mount | grep '/run/k3s' | awk '{print $3}' | tac) 2>/dev/null || true
+sleep 2
 
 echo "[+] Cleaning previous k3s state"
-sudo rm -rf /var/lib/rancher/k3s /run/k3s
+sudo rm -rf /var/lib/rancher/k3s 2>/dev/null || true
+sudo rm -rf /run/k3s 2>/dev/null || true
 
 echo "[+] Writing k3s config (native snapshotter + Calico CNI)"
 sudo mkdir -p /etc/rancher/k3s
